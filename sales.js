@@ -31,7 +31,7 @@ function calculateReceipt(){
   document.getElementById("tot").innerHTML = "$" + receiptTotal;
 }
 
-//takes a number and gives a string with the number displayed as USD currency
+//takes a number and gives a string with the number displayed as USD currency sd
 function asCurrency(val)
 {
   return "$" + val.toFixed(2);

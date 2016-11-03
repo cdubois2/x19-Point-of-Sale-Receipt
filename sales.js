@@ -17,20 +17,19 @@ function addItem()
     dollars = asCurrency(runningTotal);
     document.getElementById("subtotal").innerHTML = dollars;
     document.getElementById("price").value = " ";
-    setCookie("preTax",runningTotal,1);
+    setCookie("preTax",runningTotal,10);
   }
 }
 
 function calculateReceipt(){
-  var receiptSubtotal = getCookie("preTax");
-  var receiptTax = receiptSubtotal * 0.075;
+  var receiptSubtotal = Number(getCookie("preTax"));
+  var receiptTax = receiptSubtotal * 0.075;s
   var receiptTotal = receiptSubtotal + receiptTax;
 
   document.getElementById("sub").innerHTML = "$" + receiptSubtotal;
   document.getElementById("tax").innerHTML = "$" + receiptTax;
   document.getElementById("tot").innerHTML = "$" + receiptTotal;
 }
-
 
 //takes a number and gives a string with the number displayed as USD currency
 function asCurrency(val)
